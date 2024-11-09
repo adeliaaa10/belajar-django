@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Django App Ditta</title>
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+
+</head>
+<body>
+    <h1>Hello this is index.html</h1>
+    {{ insert_me }}
+
+
+    <p>Ini adalah gambar ikan</p>
+    <img src="{% static 'images/gambar1.jpg' %}" alt="gambar ikan">
+
+
+
+</body>
+</html>
