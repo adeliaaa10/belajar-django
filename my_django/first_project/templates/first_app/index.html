@@ -10,11 +10,30 @@
 </head>
 <body>
     <h1>Hello this is index.html</h1>
-    {{ insert_me }}
-
 
     <p>Ini adalah gambar ikan</p>
-    <img src="{% static 'images/gambar1.jpg' %}" alt="gambar ikan">
+    <img src="{% static 'images/gambar1.jpg' %}" alt="gambar ikan" width="100">
+
+
+    <h2>This is your acees record </h2>
+    <div class="django two">
+        {%if access_records %}
+            <table border="1">
+                <thead>
+                    <th>Site Name</th>
+                    <th>Date Accessed</th>
+                </thead>
+                {% for acc in access_records %}
+                    <tr>
+                        <td> {{acc.name}} </td>
+                        <td> {{acc.date}} </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No Access Record found</p>
+        {% endif %}
+    </div>
 
 
 
