@@ -11,7 +11,8 @@
     <h1>Fill Out the form!</h1>
     <div class="container">
         <form action="" method="post">
-            {{form}}
+            {{form.as_p}}
+            {% csrf_token %}
             <input type="submit"  value="submit" class="btn btn-primary">
         </form>
        
