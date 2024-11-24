@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Index</title>
-</head>
-<body>
+{% extends 'basic_app/base.html' %}
+
+
+{% block body_block %}
     <h1>This is index.html</h1>
-    
-</body>
-</html>
+    <!-- Memanggil dictionary yang sudah dibuat di views.py -->
+    <p>{{ text | cut:"world" }}</p>
+    <p>{{ number | add:"99" }}</p>
+{% endblock %}
